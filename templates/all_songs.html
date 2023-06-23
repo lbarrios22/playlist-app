@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}All Songs{% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for song in songs %}
+    <li class='my-3'><b>Song Name:</b> {{song.title}}</li>
+    <ul>
+        <b>Artist:</b> {{song.artist}}
+    </ul>
+    {% endfor %}
+</ul>
+
+{% endblock %}

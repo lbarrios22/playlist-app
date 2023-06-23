@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}All Playlists{% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for playlist in playlists %}
+    <li class='my-3'><b>Playlist Name:</b> {{playlist.name}}</li>
+    <ul>
+        {% if playlist.description %}
+        <b>Description:</b> {{playlist.description}}
+        {% else %}
+        <b>Description:</b> No description
+        {% endif %}
+    </ul>
+    {% endfor %}
+</ul>
+
+{% endblock %}

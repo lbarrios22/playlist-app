@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}{{song.title}}{% endblock %}
+
+{% block content %}
+
+<li class='my-3'><b>Song Name:</b> {{song.title}}</li>
+<ul>
+    <b>Description:</b> {{song.description}}
+</ul>
+
+{% endblock %}
